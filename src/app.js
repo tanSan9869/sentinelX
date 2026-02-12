@@ -13,4 +13,12 @@ app.get("/", (_req, res) => {
 	res.json({ status: "ok", message: "SentinelX API is running" });
 });
 
+app.get("/api/health", (req, res) => {
+  res.json({
+    status: "OK",
+    message: "SentinelX backend running",
+    timestamp: new Date()
+  });
+});
+
 export default app;
